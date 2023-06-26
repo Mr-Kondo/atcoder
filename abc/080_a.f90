@@ -1,0 +1,11 @@
+ IMPLICIT NONE
+ INTEGER :: N, A, B
+ READ*, N, A, B
+ IF (N*A > B) THEN
+     PRINT*, B
+ ELSE IF(N*A == B) THEN
+ 	PRINT*, B
+ ELSE
+ 	PRINT*, N*A
+ END IF
+END
