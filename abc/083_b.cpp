@@ -1,22 +1,23 @@
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-int main() {
-  int N, A, B;
-  cin >> N >> A >> B;
-  
-  int res = 0;
-  
-  for(int i=0; i<=N; i++){
-    string str = to_string(i);
-    int temp = 0;
-    //cout << "str= " << str << endl;
-    for(int j=0; j<(int)str.size();j++){
-    	temp += (int)(str[j]-'0');
+int calc_sum_digits(int n){
+    int sum_digt = 0;
+    while(n>0){
+        sum_digt += n % 10;
+        n /= 10;
     }
-    if( temp >= A  && temp <= B) /*cout<<temp<<endl;*/res += i;
-  }
+    return sum_digt;
+}
 
-  cout << res << endl;
-  return 0;
+int main() {
+    int N, A, B;
+    cin >> N >> A >> B;
+    int sum = 0;
+    for(int i=0; i<=N; ++i){
+        int dummy = calc_sum_digits(i);
+        if (dummy>=A && dummy <=B){sum += i;}
+    }
+    cout << sum << endl;
+    return 0;
 }
