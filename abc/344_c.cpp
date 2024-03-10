@@ -44,8 +44,7 @@ int main() {
    }
  }
  
- set<unsigned int> set_D(vec_D.begin(), vec_D.end());
- 
+ unordered_set<unsigned int> set_D(vec_D.begin(), vec_D.end());
  
  for(int i=0; i<Q; ++i){
    if(set_D.find(vec_X[i]) != set_D.end()) cout << "Yes\n";
