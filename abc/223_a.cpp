@@ -1,11 +1,12 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+using ll = long long;
+
 int main(){
-  int X = 0;
+  int X;
   cin >> X;
-  if(X>0){
-    if(X%100 == 0){ cout << "Yes" << endl;}
-    else{ cout << "No" << endl;}
-  }else cout << "No" << endl;
+  if((int)(X/100) == 0 || X%100 != 0) cout << "No" << '\n';
+  else cout << "Yes" << '\n';
   return 0;
 }
