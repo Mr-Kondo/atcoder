@@ -25,7 +25,7 @@ int main(){
   
   ll A = 0;
   bool flg = false;
-  for(ll i=1; i<17; i++){
+  for(ll i=1; i<17; i++){ // 「ll i=0」で始めると B=1 のときに答えが0で出力されてしまう。 
     A = powpow(i,i);
     if(B == A){
         flg = true;
