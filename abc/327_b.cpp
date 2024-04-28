@@ -7,7 +7,7 @@ using ll = long long;
 /*
  https://edo1z.hatenablog.com/2020/03/10/032523            edo1z blog：「繰り返し二乗（自乗）法」（C++ 累乗の速いやつ）
  https://programming-hiroba.com/abc327-b/                  プログラミングのひろば：16の16乗がBの最高値を超えるという発想 
- https://drken1215.hatenablog.com/entry/2023/11/05/014024  けんちょんの競プロ精進記録：答えの考え方
+ https://drken1215.hatenablog.com/entry/2023/11/05/014024  けんちょんの競プロ精進記録：コードの流れ
 */
 
 // xのn乗
