@@ -1,34 +1,23 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+using ll = long long;
 
-int main() {
+int main(){
   int N;
   cin >> N;
-  vector<int> vec(N), vec2(N);
-  for (int i = 0; i < N; i++){
-    cin >> vec.at(i);
-  }
-    
-  for(int j = 1; j < N; j++){
-    int dummy = 0;
-    for(int i = 0; i < N; i++){
-      if( vec.at(j) > vec.at(i)){
-        dummy = vec.at(j);
-        vec.at(j) = vec.at(i);
-        vec.at(i) = dummy;
-      }
-    }
+  vector<int> A(N);
+  
+  rep(i,N) cin >> A[i];
+  sort(A.begin(), A.end());
+  
+  int Alice = 0; int Bob = 0;
+  rep(i,N){
+    if(i%2 == 0) Alice += A[i];
+    else Bob += A[i];
   }
   
-  int Alice = 0;
-  int Bob   = 0;
+  cout << abs(Alice-Bob) << '\n';
   
-  for(int i = 0; i < N; i++){
-    if( i%2 == 0){
-      Alice += vec.at(i);
-    }else{
-      Bob   += vec.at(i);
-    }
-  }
-  
-  cout << Alice - Bob << endl;
+  return 0;
+}
