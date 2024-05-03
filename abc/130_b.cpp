@@ -1,3 +1,4 @@
+// 参考"https://blog.hamayanhamayan.com/entry/2019/06/17/205556"
 #include <bits/stdc++.h>
 using namespace std;
 #define rep(i, n) for (int i = 0; i < (int)(n); i++)
