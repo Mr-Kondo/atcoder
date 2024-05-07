@@ -1,21 +1,20 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+using ll = long long;
 
-int main() {
+int main()
+{
   int N;
   cin >> N;
-  int ave;
+  vector<int> A(N);
+  int ave = 0;
+  rep(i,N){
+    cin >> A[i];
+    ave += A[i];
+  } 
+  ave = floor(ave/N);
+  rep(i,N) cout << abs(A[i]-ave) << '\n';
   
-  vector<int> vec(N);
-  for (int i = 0; i < vec.size(); i++) {
-    cin >> vec.at(i);
-    ave += vec.at(i); 
-  }
-  
-  ave /= vec.size();
-  
-  for (int i = 0; i < vec.size(); i++) {
-    cout << abs(vec.at(i) - ave) << endl;
-  }
-  
+  return 0;
 }
