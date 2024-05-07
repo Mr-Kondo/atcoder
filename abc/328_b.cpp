@@ -1,19 +1,21 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-int main() {
-    int N, D;
-    int cnt = 0;
-    cin >> N;
-    for(int i=1; i<N+1; i++){
-        cin >> D;
-        if(i==1 || i==2 || i==3 || i==4 || i==5 || i==6 || i==7 || i==8 || i==9 || i==11 || i==22 || i==33 || i==44 || i==55 || i==66 || i==77 ||i==88 || i==99){
-            if(D>=i){cnt++;}
-            if(D>=i*11){cnt++;}
-            if( i==11 || i==22 || i==33 || i==44 || i==55 || i==66 || i==77 ||i==88 || i==99){
-                if(D>=int(i/10)){cnt++;}
-            }
-        }
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+using ll = long long;
+
+int main()
+{
+  int N;
+  cin >> N;
+  vector<int> D(N);
+  int ans = 0;
+  rep(i,N) cin >> D[i];
+  rep(i,N){
+    rep(j,D[i]){
+      string date = to_string(j+1)+to_string(i+1);
+      if(size(set<char>(date.begin(), date.end())) == 1) ans++;
     }
-    cout << cnt << endl;
-    return 0;
+  }
+  cout << ans << '\n';
+  return 0;
 }
