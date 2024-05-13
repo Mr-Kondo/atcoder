@@ -3,7 +3,7 @@ using namespace std;
 #define rep(i, n) for (int i = 0; i < (int)(n); i++)
 using ll = long long;
 
-// Reffernce Qiita,"Vectorの平均値と中央値を求める", https://qiita.com/kajitack/items/aaf4721c55e372de3c20"
+// Reffernce : Qiita,"Vectorの平均値と中央値を求める", https://qiita.com/kajitack/items/aaf4721c55e372de3c20"
 
 int main()
 {
