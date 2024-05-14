@@ -1,21 +1,17 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+using ll = long long;
 
-int main() {
-    int n = 0;
-    vector<string> v_str;
-    string str;
-    cin >> n;
-
-    for(int i=0; i<n;++i){
-        cin >> str;
-        v_str.push_back(str);
-    }
-    
-    for (int i=0; i<n; ++i){
-        cout << v_str.at(n-1-i) << endl;
-    }
-
-    return 0;
+constexpr ll INF = 1<<30;
+int main()
+{
+  int N;
+  cin >> N;
+  vector<string> S(N);
+  rep(i,N) cin >> S[i];
+  
+  rep(i,N) cout << S[N-1-i] << '\n';
+  
+  return 0;
 }
