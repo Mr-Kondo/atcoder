@@ -5,6 +5,13 @@ using ll = long long;
 
 constexpr ll INF = 1<<30;
 
+// Refference
+// 1. Qiita C++で文字列から特定の文字を削除する方法
+//    "https://qiita.com/hryshtk/items/d5371e61f9f566a3cbdf"
+// 2. 心配事100, "C++でSTRINGに入れた文字列の一部が大文字か小文字か判定する方法"
+//    "https://shunichiro.net/2019/10/10/cでstringに入れた文字列の一部が大文字か小文字か判/"
+
+
 bool isACorWA(string s){
    if(s[0] != 'A'){
     return false;
@@ -29,6 +36,7 @@ bool isACorWA(string s){
     }
   }
   
+  // Erase 'A' and 'C' from input string.
   s.erase(remove(s.begin(),s.end(),'A'),s.end());
   s.erase(remove(s.begin(),s.end(),'C'),s.end());
   
