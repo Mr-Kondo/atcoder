@@ -10,12 +10,10 @@ int main()
   string S;
   cin >> S;
   
-  
   string rS = S;
   reverse(rS.begin(), rS.end());
   
   int ans = 0;
-  
   rep(i,S.size()){
     if(S[i] != rS[i]) ans++;
   }
