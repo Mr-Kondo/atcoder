@@ -5,7 +5,7 @@ using ll = long long;
 constexpr ll INF = 1<<30;
 
 // Refference : アルゴ式, "約数列挙のアルゴリズム", "https://algo-method.com/descriptions/84"
-// 公式解答："https://blog.hamayanhamayan.com/entry/2018/08/18/230559"　←　計算量がO(√N)のenumdivを使っている。要理解。
+// 公式解答："https://blog.hamayanhamayan.com/entry/2018/08/18/230559"　←　こちらは計算量がO(√N)
 
 int main()
 {
