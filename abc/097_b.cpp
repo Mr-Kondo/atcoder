@@ -4,20 +4,31 @@ using namespace std;
 using ll = long long;
 constexpr ll INF = 1<<30;
 
+/**
+ * This program finds the largest power of the form base^exponent that is less than or equal to x,
+ * where base and exponent are positive integers, and exponent is at least 2.
+ *
+ * @param none
+ * @return none
+ */
 int main()
 {
     int x;
     cin >> x;
-    int max = -1;
-    
-    for(int i = 1; i <= 1000; i++){
-        for(int j = 2; j <= 1000; j++){
-            if(pow(i,j) > x) continue;
-            if(pow(i,j) >= max) max = pow(i,j);
+
+    int maxPow = -1;
+
+    for (int base = 1; base <= 1000; ++base) {
+        for (int exponent = 2; exponent <= 1000; ++exponent) {
+            if (pow(base, exponent) > x) {
+                break;
+            }
+
+            maxPow = max(maxPow, static_cast<int>(pow(base, exponent)));
         }
     }
 
-    cout << max << endl;
-    
+    cout << maxPow << endl;
+
     return 0;
 }
